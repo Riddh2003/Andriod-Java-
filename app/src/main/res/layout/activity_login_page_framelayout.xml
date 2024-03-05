@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginPage_Framelayout"
+    android:background="@drawable/canvas1">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="#CCFFFFFF"
+            app:cardBackgroundColor="#B3FFFFFF">
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="LOGIN"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColorHint="#E6FB1C33"/>
+
+        <EditText
+            android:id="@+id/editTextText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Email"
+            android:inputType="text"
+            android:textColorHint="#80FB1C33"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/editTextText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Password"
+            android:inputType="text"
+            android:textColorHint="#80FB1C33"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="LOGIN"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColorHint="#80000000"
+            android:backgroundTint="#80FB1C33"/>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Forget Password"
+            android:textColorHint="#BFFB1C33"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:textSize="15sp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="3dp"/>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Create Account"
+            android:textColorHint="#BFFB1C33"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:layout_marginRight="10dp"
+            android:textSize="15sp"/>
+    </LinearLayout>
+</FrameLayout>
