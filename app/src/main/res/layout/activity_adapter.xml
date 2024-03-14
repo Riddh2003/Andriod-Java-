@@ -29,7 +29,8 @@
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <GridView
             android:numColumns="3"
