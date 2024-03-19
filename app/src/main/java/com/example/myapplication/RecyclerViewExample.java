@@ -1,7 +1,14 @@
 package com.example.myapplication;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,5 +27,26 @@ public class RecyclerViewExample extends AppCompatActivity {
         rv.setLayoutManager(linearLayoutManager);
         MyAdapter myAdapter = new MyAdapter(RecyclerViewExample.this,image,name,time);
         rv.setAdapter(myAdapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuItem m1 = menu.add(0,0,0,"Logout");
+        m1.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(@NonNull MenuItem item) {
+                if(item.getItemId()==0){
+                    SharedPreferences sharedPreferences = getSharedPreferences("myfile", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor ed = sharedPreferences.edit();
+                    ed.putBoolean("IsRegister",false);
+                    ed.putBoolean("IsLogin",false);
+                    ed.apply();
+                    Intent i = new Intent(RecyclerViewExample.this, RegistrationPage.class);
+                    startActivity(i);
+                }
+                return false;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
     }
 }
