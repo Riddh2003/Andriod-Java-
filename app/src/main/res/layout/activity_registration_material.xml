@@ -39,6 +39,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/fn"
                     android:hint="Firstname"
                     android:layout_marginBottom="12dp"
                     android:layout_marginLeft="20dp"
@@ -59,6 +60,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/ln"
                     android:layout_marginBottom="12dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
@@ -73,32 +75,35 @@
                 android:id="@+id/textField3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:textColorHint="#BF3E07"
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/password"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:background="#FFC8B2"
                     android:hint="Password"
                     android:inputType="textPassword"
                     android:textStyle="italic"
                     android:drawableStart="@drawable/lock" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textField4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:textColorHint="#BF3E07"
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/email"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:background="#FFC8B2"
                     android:inputType="textEmailAddress"
                     android:textStyle="italic"
@@ -112,16 +117,17 @@
                 android:orientation="horizontal">
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textField5"
-                    android:layout_width="190dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Phone"
-                    android:layout_marginBottom="12dp"
-                    android:layout_marginLeft="20dp"
                     android:textColorHint="#BF3E07"
                     >
                     <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
+                        android:layout_width="190dp"
                         android:layout_height="wrap_content"
+                        android:id="@+id/phone"
+                        android:hint="Phone"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="20dp"
                         android:background="#FFC8B2"
                         android:inputType="phone"
                         android:textStyle="italic"
@@ -130,14 +136,15 @@
                 </com.google.android.material.textfield.TextInputLayout>
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textField6"
-                    android:layout_width="160dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
                     android:textColorHint="#BF3E07"
                     >
                     <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
+                        android:layout_width="160dp"
                         android:layout_height="wrap_content"
+                        android:id="@+id/area"
+                        android:layout_marginLeft="20dp"
                         android:background="#FFC8B2"
                         android:inputType="none"
                         android:textStyle="italic"
@@ -150,14 +157,15 @@
                 android:id="@+id/textField7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="12dp"
                 android:textColorHint="#BF3E07"
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/address"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="12dp"
                     android:background="#FFC8B2"
                     android:inputType="textMultiLine"
                     android:textStyle="italic"
@@ -214,15 +222,16 @@
                 android:id="@+id/textField8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="12dp"
-                android:hint="Birthday"
                 android:textColorHint="#BF3E07"
-                android:layout_marginRight="20dp"
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/birthday"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="12dp"
+                    android:hint="Birthday"
                     android:background="#FFC8B2"
                     android:inputType="date"
                     android:textStyle="italic"

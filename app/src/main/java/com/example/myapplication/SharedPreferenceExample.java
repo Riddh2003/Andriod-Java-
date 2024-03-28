@@ -31,19 +31,19 @@ public class SharedPreferenceExample extends AppCompatActivity {
                 String pass = tx2.getText().toString();
                 SharedPreferences sharedPreference = getSharedPreferences("myfile", Context.MODE_PRIVATE);
                 SharedPreferences.Editor ed = sharedPreference.edit();
-                ed.putString("name",uname);
-                ed.putString("password",pass);
+                ed.putString("name", uname);
+                ed.putString("password", pass);
                 ed.apply();
-                Toast.makeText(SharedPreferenceExample.this,"SAVE",Toast.LENGTH_LONG).show();
+                Toast.makeText(SharedPreferenceExample.this, "SAVE", Toast.LENGTH_LONG).show();
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPreferences = getSharedPreferences("myfile",Context.MODE_PRIVATE);
-                String name = sharedPreferences.getString("name",null);
-                String password  = sharedPreferences.getString("password",null);
-                textView.setText(name +" : "+password);
+                SharedPreferences sharedPreferences = getSharedPreferences("myfile", Context.MODE_PRIVATE);
+                String name = sharedPreferences.getString("name", null);
+                String password = sharedPreferences.getString("password", null);
+                textView.setText(name + " : " + password);
             }
         });
     }

@@ -15,6 +15,9 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".DataBaseShow"
+            android:exported="false" />
+        <activity
             android:name=".Registration_Material"
             android:exported="true">
             <intent-filter>
@@ -28,10 +31,10 @@
             android:exported="false" />
         <activity
             android:name=".SharedPreferenceExample"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".RecyclerViewExample"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Adapter"
             android:exported="true" />
@@ -79,8 +82,7 @@
             android:exported="false" />
         <activity
             android:name=".RegistrationPage"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

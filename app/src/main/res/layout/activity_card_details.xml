@@ -8,7 +8,8 @@
     android:layout_gravity="center"
     android:layout_margin="10dp"
     app:cardCornerRadius="15dp"
-    android:backgroundTint="#FFEAE0">
+    android:backgroundTint="#FFEAE0"
+    tools:ignore="MissingConstraints">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,16 +17,33 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            app:srcCompat="@drawable/canvas1"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/natural"
             android:scaleType="fitXY"/>
-
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:hint="Registration"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:textColorHint="@color/or"
+            tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="TextView"
+            android:inputType="textMultiLine"
+            android:textColor="@color/or"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

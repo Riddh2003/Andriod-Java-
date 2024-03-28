@@ -4,23 +4,21 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.Myclass> {
+import java.util.ArrayList;
+
+public class RVAdapter extends RecyclerView.Adapter<RVAdapter.Myclass>{
     Context context;
-    int image[];
-    String name[];
-    String time[];
-    MyAdapter(Context context,int image[],String name[],String time[]){
+    ArrayList<User> arrayList;
+    public RVAdapter(Context context,ArrayList<User> arrayList) {
         this.context = context;
-        this.image = image;
-        this.name = name;
-        this.time = time;
+        this.arrayList = arrayList;
     }
+
     @NonNull
     @Override
     public Myclass onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -30,24 +28,25 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.Myclass> {
 
     @Override
     public void onBindViewHolder(@NonNull Myclass holder, int position) {
-        holder.iv.setImageResource(image[position]);
-        holder.tv1.setText(name[position]);
-        holder.tv2.setText(time[position]);
+        holder.tx1.setText(arrayList.get(position).getId());
+        holder.tx2.setText(arrayList.get(position).getFname());
+        holder.tx3.setText(arrayList.get(position).getLname());
+        holder.tx4.setText(arrayList.get(position).getPassword());
     }
 
     @Override
     public int getItemCount() {
-        return image.length;
+        return arrayList.size();
     }
 
     class Myclass extends RecyclerView.ViewHolder{
-        ImageView iv;
-        TextView tv1,tv2;
+        TextView tx1,tx2,tx3,tx4;
         public Myclass(@NonNull View itemView) {
             super(itemView);
-//            iv = itemView.findViewById(R.id.imageView1);
-            tv1 = itemView.findViewById(R.id.textView1);
-            tv2 = itemView.findViewById(R.id.textView2);
+            tx1 = itemView.findViewById(R.id.textView1);
+            tx2 = itemView.findViewById(R.id.textView2);
+            tx3 = itemView.findViewById(R.id.textView3);
+            tx4 = itemView.findViewById(R.id.textView4);
         }
     }
 }
