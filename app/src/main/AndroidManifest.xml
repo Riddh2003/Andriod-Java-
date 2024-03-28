@@ -24,15 +24,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TabLayoutExample"
-            android:exported="true">
-        </activity>
+            android:name=".Card_details"
+            android:exported="false" />
         <activity
             android:name=".SharedPreferenceExample"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".RecyclerViewExample"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".Adapter"
             android:exported="true" />
@@ -80,7 +79,8 @@
             android:exported="false" />
         <activity
             android:name=".RegistrationPage"
-            android:exported="true"></activity>
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>
