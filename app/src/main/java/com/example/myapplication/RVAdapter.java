@@ -28,9 +28,8 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.Myclass>{
 
     @Override
     public void onBindViewHolder(@NonNull Myclass holder, int position) {
-        holder.tx1.setText(arrayList.get(position).getId());
-        holder.tx2.setText(arrayList.get(position).getFname());
-        holder.tx3.setText(arrayList.get(position).getLname());
+        holder.tx1.setText(arrayList.get(position).getFname());
+        holder.tx2.setText(arrayList.get(position).getLname());
         holder.tx4.setText(arrayList.get(position).getPassword());
     }
 
@@ -46,7 +45,6 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.Myclass>{
             tx1 = itemView.findViewById(R.id.textView1);
             tx2 = itemView.findViewById(R.id.textView2);
             tx3 = itemView.findViewById(R.id.textView3);
-            tx4 = itemView.findViewById(R.id.textView4);
         }
     }
 }
