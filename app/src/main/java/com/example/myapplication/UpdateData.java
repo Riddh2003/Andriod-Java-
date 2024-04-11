@@ -20,6 +20,10 @@ public class UpdateData extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_data);
+        tx1 = findViewById(R.id.editTextText1);
+        tx2 = findViewById(R.id.editTextText2);
+        tx3 = findViewById(R.id.editTextText3);
+        btn = findViewById(R.id.button);
         Intent i = getIntent();
         int id = i.getIntExtra("id",0);
         String fname = i.getStringExtra("fname");
